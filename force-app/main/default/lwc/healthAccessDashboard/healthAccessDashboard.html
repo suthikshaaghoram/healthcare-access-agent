@@ -1,0 +1,67 @@
+<template>
+    <lightning-card title="Healthcare Access Dashboard" icon-name="standard:care_request_reviewer">
+
+        <template if:true={snapshot}>
+            <div class="slds-grid slds-wrap slds-p-horizontal_medium">
+
+                <div class="slds-col slds-size_1-of-2 slds-large-size_1-of-4 slds-p-around_x-small">
+                    <div class="summary-card">
+                        <div class="card-label">Verified Facilities</div>
+                        <div class="card-value">{snapshot.facilityCount}</div>
+                    </div>
+                </div>
+
+                <div class="slds-col slds-size_1-of-2 slds-large-size_1-of-4 slds-p-around_x-small">
+                    <div class="summary-card">
+                        <div class="card-label">Low Stock Lines</div>
+                        <div class="card-value">{snapshot.lowStockCount}</div>
+                    </div>
+                </div>
+
+                <div class="slds-col slds-size_1-of-2 slds-large-size_1-of-4 slds-p-around_x-small">
+                    <div class="summary-card">
+                        <div class="card-label">Out of Stock</div>
+                        <div class="card-value">{snapshot.outOfStockCount}</div>
+                    </div>
+                </div>
+
+                <div class="slds-col slds-size_1-of-2 slds-large-size_1-of-4 slds-p-around_x-small">
+                    <div class="summary-card">
+                        <div class="card-label">Upcoming Visits</div>
+                        <div class="card-value">{snapshot.upcomingVisits}</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="slds-p-around_medium">
+
+                <h2 class="section-title">Stock Needing Attention</h2>
+
+                <lightning-datatable
+                    key-field="id"
+                    data={stockRows}
+                    columns={stockColumns}
+                    hide-checkbox-column>
+                </lightning-datatable>
+
+                <h2 class="section-title slds-m-top_large">Next Visit Plans</h2>
+
+                <lightning-datatable
+                    key-field="id"
+                    data={visitRows}
+                    columns={visitColumns}
+                    hide-checkbox-column>
+                </lightning-datatable>
+
+            </div>
+        </template>
+
+        <template if:true={error}>
+            <div class="slds-p-around_medium slds-text-color_error">
+                Unable to load dashboard information. Please check the records and permissions.
+            </div>
+        </template>
+
+    </lightning-card>
+</template>

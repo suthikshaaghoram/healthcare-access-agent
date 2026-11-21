@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Healthcare_Facility__c</members>
+        <members>Medical_Service__c</members>
+        <members>Medicine_Inventory__c</members>
+        <members>Visit_Preparation__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>FacilityFinder</members>
+        <members>MedicineInventoryLookup</members>
+        <members>HealthAccessDashboardController</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>healthAccessDashboard</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <types>
+        <members>Create_Visit_Preparation</members>
+        <name>Flow</name>
+    </types>
+    <types>
+        <members>Health_Management_Permission</members>
+        <name>PermissionSet</name>
+    </types>
+    <version>68.0</version>
+</Package>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Facility_Type__c</fullName>
+    <label>Facility Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>District Hospital</fullName>
+                <default>false</default>
+                <label>District Hospital</label>
+            </value>
+            <value>
+                <fullName>Taluk Hospital</fullName>
+                <default>false</default>
+                <label>Taluk Hospital</label>
+            </value>
+            <value>
+                <fullName>Community Health Centre</fullName>
+                <default>false</default>
+                <label>Community Health Centre</label>
+            </value>
+            <value>
+                <fullName>Primary Health Centre</fullName>
+                <default>false</default>
+                <label>Primary Health Centre</label>
+            </value>
+            <value>
+                <fullName>Urban Health Centre</fullName>
+                <default>false</default>
+                <label>Urban Health Centre</label>
+            </value>
+            <value>
+                <fullName>Maternity and Child Hospital</fullName>
+                <default>false</default>
+                <label>Maternity and Child Hospital</label>
+            </value>
+            <value>
+                <fullName>Dispensary</fullName>
+                <default>false</default>
+                <label>Dispensary</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
